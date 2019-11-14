@@ -82,8 +82,8 @@
   background-repeat: no-repeat;
   display: block;
   margin: 0 auto;
-  min-width: 1300px;
-  min-height: 566px;
+  
+  width: 100%;
 }
 
 .content {
@@ -93,64 +93,73 @@
   justify-content: space-between;
 }
 
-.navbar ul {
+.navbar .navbar-items {
   display: flex;
   width: 453px;
   height: 41px;
-  background-image: linear-gradient(0deg, #f5c505 0%, #f5c505 100%);
+  background:  #f5c505;
   margin-top: 71px;
   box-shadow: -4px -5px rgba(245, 197, 5, 0.27), -8px -8px rgba(245, 197, 5, 0.27);
- 
 }
 
-.navbar ul li a{
-  display: flex;
+.navbar a{
   font-size: 17px;
   letter-spacing: 0px;
   color: #9b7d08;
   font-family: "Segoe WP";
   text-decoration: none;
-  text-align: center;
-  margin-left: 9px;
 }
 
-.navbar ul li:hover{
-  background-color: rgb(13, 204, 191);
-}
-
-.navbar ul li{
+.navbar .navbar-items div{
   align-items: center;
   display: flex;
+}
+
+.navbar-items div p {
+  margin-left: 9px;
 }
 
 
 .about-us{
   width: 172px;
-  
+  height: 41px;
+}
+
+.about-us:hover {
+  background-color: #ffdd53;
 }
 
 .services {
   width: 132px;
+  height: 41px;
   border-right: 1px solid #dcb105;
   border-left:  1px solid #dcb105;
-  
+}
+
+.services:hover {
+  background-color: #ffdd53;
 }
 
 .contact {
   width: 149px;
+  height: 41px;
 }
 
-.about-icon {
-  margin-left: 39px;
+.contact:hover {
+  background-color: #ffdd53;
+  width: 147px;
 }
 
-.services-icon {
+.about-us__icon {
+   margin-left: 39px;
+}
+
+.services__icon {
   margin-left: 14px;
 }
 
-.contact-icon {
-  margin-left: 15px;
-  margin-top: -1px;
+.contact__icon {
+  margin-left: 17px;
 }
 
 .logo {
@@ -170,7 +179,7 @@
   height: 81px;
 }
 
-.theyalow {
+.logo__text {
   font-family: "Lucida Sans";
   font-size: 41px;
   color: #ffffff;
@@ -187,35 +196,36 @@
   margin-left: 10px;
 }
 
+.main-video video {
+  width: 549px;
+  height: 327px;
+}
+
 .mobile-version {
   display: none;
 }
 
-.the-cool{
+.side-headlines__first-line {
   font-size: 63px;
   letter-spacing: 1px;
   color: #f5c506;
   font-family: "Asap";
   font-weight: 400;
-  margin-left: 20px;
-  margin-top: -12px;
-  letter-spacing: 0.6px;
+  text-align: center;
+  letter-spacing: 0.4px;
 }
 
-.the-minimal {
+.side-headlines__second-line {
   font-size: 63px;
   color: #ffffff;
   font-family: "Asap";
   font-weight: 400;
   margin-top: 14px;
-  margin-left:-18px;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.4px;
 }
 
-.side-headlines{
-  display: block;
-  width: 392px;
-  height: 121px;
+.side-headlines {
+  height: 132px;
   margin-top: 146px;
   margin-left: 51px;
 }
@@ -242,104 +252,129 @@
   position: relative; 
 }
 
-.move-slider-left {
+.click-left__icon {
   margin-top: 19px;
   margin-left: 8px;
 }
 
-.move-slider-right {
+.click-right__icon {
   margin-top: 18px;
   margin-left: 11px;
 }
 
 .click-left:hover{
-  background-color:  rgb(13, 204, 191);
+  background-color:  #ffdd53;
 }
 
 .click-right:hover{
-  background-color:  rgb(13, 204, 191);
+  background-color:  #ffdd53;
 }
 
 .icon-area {
   height: 212px;
+  width: 100%;
   background: url('./images/icon-background.png');
   margin-top: 67px;
   box-shadow: 0 -6px rgba(0, 0, 0, 0.18), 0 3px rgba(0, 0, 0, 0.5);
 }
 
+.icon-area content{
+  justify-content: center;
+}
+
 .better-design {
   border-left: 1px solid rgba(212, 212, 212, 1);
-  width: 338px;
+  max-width: 338px;
+  width: 100%;
   height: 212px;
+  padding-top: 0.1px;
+}
+
+.better-design:hover {
+  background: #ffffff;
 }
 
 .customise {
   border-left: 1px solid rgba(212, 212, 212, 1);
   border-right: 1px solid rgba(212, 212, 212, 1);
-  width: 338px;
+  max-width: 338px;
+  width: 100%;
   height: 212px;
+  padding-top: 0.1px;
+}
+
+.customise:hover {
+  background: #ffffff;
 }
 
 .its-free {
   border-right: 1px solid rgba(212, 212, 212, 1);
-  width: 338px;
+  max-width: 338px;
+  width: 100%;
   height: 212px;
-  max-width: 1300px;
+  padding-top: 0.1px;
 }
 
-.design-icon {
-  margin-left: 110px;
+.its-free:hover {
+  background: #ffffff;
+}
+
+.better-design__icon {
+  display: flex;
+  justify-content: center;
   margin-top: 60px;
 }
 
-.customise-icon {
-  margin-left: 127px;
+
+.customise__icon {
+  display: flex;
+  justify-content: center;
   margin-top: 36px;
 }
 
-.its-free-icon {
-  margin-left: 116px;
+.its-free__icon {
+  display: flex;
+  justify-content: center;
   margin-top: 52px;
 }
 
 .icon-area-link {
+  display: block;
   text-decoration: none;
+  width: 339px;
+  height: 212px;
 }
 
-.better-design-text,
-.customise-text,
-.its-free-text {
+.better-design__text,
+.customise__text,
+.its-free__text {
   font-size: 27px;
   letter-spacing: 0.4px;
   color: #000000;
   font-family: "Segoe UI Light";
   font-weight: 300;
-  
+  text-align: center;
 }
 
-.better-design-text {
+.better-design__text {
   margin-top: 9px;
-  margin-left: 85px;
 }
 
-.customise-text {
+.customise__text {
   margin-top: 12px;
-  margin-left: 110px;
- 
 }
 
-.its-free-text {
+.its-free__text {
   margin-top: 7px;
-  margin-left: 112px;
 }
 
-.lorem-ipsum {
+.lorem {
   height: 509px;
   max-width: 1300px;
   background: url('./images/lorem-background.png');
 }
 
-.lorem-heading {
+.lorem__heading {
   font-size: 37px;
   letter-spacing: 0.3px;
   color: #ffffff;
@@ -350,17 +385,20 @@
   
 }
 
-.lorem-text-section {
+.lorem-description {
   width: 341px;
   height: 233px;
   background-color: #ec9e03;
   margin-top: 35px;
-  
 }
 
-.lorem-text {
-  width: 272px;
-  height: 174px;
+.lorem-description a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.lorem-description__text {
   font-size: 29px;
   letter-spacing: 0px;
   line-height: 38px;
@@ -372,59 +410,71 @@
   text-align: left;
 }
 
-.plus {
-  margin-left: 314px;
-  margin-top: 17px;
-  width: 14px;
+.lorem-description__plus {
+  margin-right: 14px;
+  text-align: right;
 }
 
-.lorem-content {
-  max-width:1020px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: left;
+.lorem-description__plus a {
+  display: block;
 }
 
-.lorem-video-section {
+.lorem-video {
   margin-top: 35px;
 }
 
+.lorem-video video{
+  width: 315px;
+  height: 232px;
+}
+
 .twitter-messages {
-  width: 329px;
+  max-width: 329px;
+  width: 100%;
   height: 233px;
   background-color: #ec9e03;
   margin-left: 34px;
   margin-top: 35px;
 }
 
-.twitter-icon {
-  margin-top: 8px;
-  margin-left: 82px;
+.twitter-messages a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
 }
 
-.twitter-number {
+.twitter-messages a:hover {
+  color: #6e6e6e;
+}
+
+.lorem-description a:hover {
+  color: #6e6e6e;
+}
+
+.twitter-messages__icon {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.twitter-messages__number {
   font-size: 25px;
   letter-spacing: 0px;
   line-height: 38px;
   color: #ffffff;
   font-family: "Segoe WP Light";
   font-weight: 300;
-  margin-left: 284px;
+  text-align: right;
+  margin-right: 19px;
   margin-top: 10px;
 }
 
-.twitter-plus {
+.twitter-messages__plus {
   margin-top: 10px;
-  margin-left: 309px;
+  margin-right: 15px;
+  text-align: right;
 }
 
-.lorem-text-section:hover {
-  background-color: rgb(13, 204, 191);
-}
-
-.twitter-messages:hover {
-  background-color: rgb(13, 204, 191);
-}
 
 .date {
   background-color: #ddb101;
@@ -433,7 +483,7 @@
   margin-top: -1.7px;
 }
 
-.day-number {
+.date__number {
   font-size: 51px;
   letter-spacing: 1px;
   line-height: 38px;
@@ -443,7 +493,7 @@
   margin-left: 30px;
 }
 
-.month {
+.date__month {
   font-size: 21px;
   letter-spacing: 0px;
   line-height: 38px;
@@ -451,6 +501,11 @@
   font-family: "Segoe UI";
   margin-left: 32px;
   margin-top: -1px;
+}
+
+.range {
+  display: flex;
+  justify-content: center;
 }
 
 .range-rec {
@@ -462,7 +517,6 @@
   opacity: 0.48;
   -webkit-transition: .2s;
   transition: opacity .2s;
-  margin-left: 213px;
   margin-top: 43px;
   border-radius: 7px;
   background-color: #ffffff;
@@ -486,21 +540,17 @@
   position: relative;
 }
 
-.offers-headline {
+.offers .content:first-child {
+  justify-content: center;
+}
+
+.offers__headline {
   font-size: 43px;
   letter-spacing: 0.3px;
   color: #f5c506;
   font-family: "PT Sans";
   font-weight: 400;
-  margin-left: 212px;
   margin-top: 41px;
-}
-
-.offers-content {
-  max-width:1020px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: left;
 }
 
 .desktop {
@@ -537,17 +587,10 @@
   line-height: 25px;
 }
 
-.second-point {
-  margin-top: 24px;
+.offers-points__item {
+  margin-top: 18px;
 }
 
-.third-point {
-  margin-top: 17px;
-}
-
-.fourth-point {
-  margin-top: 24px;
-}
 
 .free-rectangle {
   width: 116px;
@@ -555,8 +598,7 @@
   border-radius: 58px;
   background-color: #f5c506;
   position: absolute;
-  top: 94px;
-  left: 139px;
+  
 }
 
 .free-offer {
@@ -605,7 +647,7 @@ footer {
   
 }
 
-.footer-theyalow {
+.footer-logo__text {
   font-size: 29px;
   letter-spacing: 0px;
   color: #ffffff;
@@ -617,10 +659,7 @@ footer {
   
 }
 
-.first-point-text,
-.second-point-text,
-.third-point-text,
-.fourth-point-text {
+.offers-points p {
   margin-left: 10px;
 }
 
@@ -634,14 +673,171 @@ footer {
   display: none;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1120px) {
+  .banner-container .content {
+    justify-content: center; 
+  }
+
+  .navbar {
+    margin-right: 20px;
+    margin-left: 30px;
+  }
+
+  .side-headlines{
+    margin-left: 30px;
+    display: block;
+    
+  }
+  .side-headlines__first-line {
+    font-size: 50px;
+  }
+  
+
+  .side-headlines__second-line {
+    font-size: 50px;
+  }
+
+  .main-video video {
+    width: 480px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .its-free {
+    border-right: none;
+    
+  }
+  
+  .lorem .content {
+    margin-left: 10px;
+    margin-right: 10px;
+  }  
+  
+  .lorem-description {
+    max-width: 341px;
+    width: 100%;
+  } 
+  
+  .lorem-description__plus {
+    margin-top: 17px;
+    margin-right: 14px;
+    text-align: right;
+  }
+
+  .lorem-description__text {
+    width: 220px;
+    font-size: 20px;
+    line-height: 35px;
+    margin-left: 20px;
+  }
+
+}
+
+@media screen and (max-width: 940px) {
+  .navbar a{
+    font-size: 14px;
+  }
+
+  .navbar .navbar-items {
+    width: 413px;
+  }
+
+  .about-us{
+    width: 152px;
+    height: 41px;
+  }
+
+  .about-us__icon {
+    margin-left: 29px;
+ }
+
+  .services {
+    width: 122px;
+  }
+
+  .contact {
+    width: 139px;
+  }
+
+  .contact:hover {
+    background-color: #ffdd53;
+    width: 137px;
+  }
+
+  .side-headlines__first-line {
+    font-size: 40px;
+    letter-spacing: 0px;
+  }
+
+  .side-headlines__second-line {
+    font-size: 40px;
+    letter-spacing: 0px;
+  }
+
+  .main-video video {
+    width: 400px;
+    height: 300px;
+  }
+
+  .icon-area {
+    margin-top: 94px;
+  }
+
+  .desktop {
+    width: 300px;
+    height: 255px;
+    margin-left: 18px;
+    margin-top: 53px;
+  }
+
+  .tablet {
+    width: 110px;
+    height: 173px;
+    margin-left: 24px;
+    margin-top: 95px;
+  }
+
+  .offers-points {
+    font-size: 18px;
+    color: #a9a9a7;
+    font-family: "Open Sans";
+    font-weight: 400;
+    margin-left: 50px;
+    margin-top: 98px;
+    line-height: 20px;
+  }
+
+}
+
+@media screen and (max-width: 880px) {
+
+  .twitter-messages__icon img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
+@media screen and (max-width: 780px) {
+
+
+.wrapper { 
+  max-width: 640px;
+  margin: 0 auto;
+}
+
 header {
   display: flex;
   width: 640px;
   height: 62px;
 }
 
-.theyalow {
+.navbar {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.logo__text {
   font-size: 19px;
   margin-top: 0px;
   margin-left: 0px;
@@ -672,41 +868,65 @@ header {
   margin-left: 13px;
 }
 
-.navbar ul {
-  width: 454px;
+
+
+.navbar .navbar-items {
+  width: 455px;
   height: 62px;
   margin-top: 0px;
   box-shadow: 0;
 }
 
-.navbar ul li a{
+.navbar a{
   font-size: 19px;
-  letter-spacing: 0px;
-  margin-left: 11px;
+  margin-left: 0;
 }
 
-.navbar ul li:hover{
-  background-color: rgb(13, 204, 191);
-}
-
-.about-icon {
+.about-us__icon {
   margin-left: 24px;
   width: 24px;
   height: 22px;
 }
 
-.services-icon {
-  margin-left: 5px;
+.services__icon {
+  margin-left: 8px;
   width: 22px;
   height: 22px;
 }
 
-.contact-icon {
+.contact__icon {
   margin-left: 12px;
   width: 28px;
   height: 21px;
 }
 
+.about-us,
+.contact,
+.services {
+  height: 62px;
+}
+
+.about-us {
+  width: 171px;
+}
+
+.services {
+  width: 132px;
+}
+
+.contact {
+  width: 149px;
+}
+
+.contact:hover {
+  background: #ffdd53;
+  width: 149px;
+}
+
+.main-video video {
+  width: 640px;
+  height: 327px;
+}
 
 .click-left,
 .click-right,
@@ -719,6 +939,8 @@ header {
   margin: 0 0 0 0;
   display: flex;
   justify-content: left;
+  position: relative;
+  z-index: 3;
 }
 
 .desktop-version {
@@ -755,83 +977,68 @@ header {
   background: #ffffff;
 }
 
+.icon-area .content {
+  height: 170px;
+}
 
-.design-icon {
-  margin-left: 0;
-  margin-top: 0;
-  width: 91px;
-  height: 63px;
-  padding-top: 32px;
-  padding-left: 44px;
+.icon-area-link {
+  height: 170px;
+}
+
+.better-design,
+.customise,
+.its-free {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 213.33px;
+  height: 170px;
   z-index: 3;
 }
 
-.customise-icon {
+.better-design__icon,
+.customise__icon,
+.its-free__icon {
   margin-left: 0;
   margin-top: 0;
-  width: 72px;
-  height: 72px;
-  padding-top: 28px;
-  padding-left:76px;
-  z-index: 3;
-}
-
-.its-free-icon {
-  margin-left: 0;
-  margin-top: 0;
-  width: 69px;
-  height: 70px;
-  padding-top: 28px;
-  padding-left: 69px;
   z-index: 3;
 }
 
 .better-design {
   border-left: none;
-  width: 213.33px;
-  height: 170px;
-  z-index: 3;
 }
 
 .customise {
   border-left: none;
   border-right: none;
-  width: 213.33px;
-  height: 170px;
-  z-index: 3;
 }
 
 .its-free {
   border-right: none;
-  width: 213.33px;
-  height: 170px;
-  z-index: 3;
 }
 
-.better-design-text,
-.customise-text,
-.its-free-text {
+.better-design__text,
+.customise__text,
+.its-free__text {
   font-size: 23px;
   z-index: 3;
 }
 
-.better-design-text {
-  margin-top: 17px;
-  margin-left: 16px;
+.better-design__text {
+  margin-top: 25px;
   z-index: 3;
   letter-spacing: 0.3px;
 }
 
-.customise-text {
-  margin-top: 13px;
-  margin-left: 57px;
+.customise__text {
+  margin-top: 5px;
   z-index: 3;
   letter-spacing: 0.3px;
 }
 
-.its-free-text {
+.its-free__text {
   margin-top: 15px;
-  margin-left: 67px;
   z-index: 3;
 }
 
@@ -851,18 +1058,18 @@ header {
   display: block;
 }
 
-.lorem-heading,
-.lorem-text {
+.lorem__heading,
+.lorem-description__text {
   display: none;
 }
 
-.lorem-ipsum {
+.lorem {
   max-width: 640px;
   background: none;
   height: auto;
 }
 
-.lorem-text-section {
+.lorem-description {
   width: 299px;
   background-color: #ec9e03;
   margin-top: 11px;
@@ -891,7 +1098,7 @@ a {
   text-decoration: none;
 }
 
-.plus {
+.lorem-description__plus {
   margin-left: 276px;
   margin-top: -9px;
   width: 14px;
@@ -904,9 +1111,9 @@ a {
   justify-content: left;
 }
 
-.lorem-video-section {
+.lorem-video {
   margin-top: 11px;
-  margin-left: 9px;
+  margin-left: 7px;
 }
 
 .twitter-messages,
@@ -921,7 +1128,7 @@ a {
   height: 461px;
 }
 
-.offers-headline {
+.offers__headline {
   font-size: 39px;
   letter-spacing: 2px;
   width: 590px;
@@ -949,8 +1156,7 @@ a {
 }
 
 .free-rectangle {
-  top: 115px;
-  left: 27px;
+  top: 42px;
 }
 
 .free-offer {
@@ -987,7 +1193,7 @@ footer {
   max-width:640px;
 }
 
-.footer-theyalow {
+.footer-logo__text {
   font-size: 17px;
   margin-top: 7px;
   margin-left: 10px;
@@ -1002,14 +1208,12 @@ footer {
 }
 
 .twitter-mobile-logo {
-  background-color: #f5c507;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 317px;
   height: 233px;
-}
-
-.twitter-mobile-icon {
-  margin-top: 58px;
-  margin-left: 85px;
+  background-color: #f5c507;
 }
 
 .twitter-mobile-messages {
@@ -1101,7 +1305,6 @@ footer {
   letter-spacing: 0px;
   color: #ffffff;
   border-radius: 0 10px 10px 0;
-  
 }
 
 }
